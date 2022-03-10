@@ -29,7 +29,7 @@ export default function Body() {
     fetch('/api/leases')
       .then(response => response.json())
       .then(data => setDocuments(data))
-  });
+  },[]);
 
   const uploadToClient = async (event) => {
     try {
