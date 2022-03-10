@@ -29,8 +29,8 @@ export default function Body() {
     fetch('/api/leases')
       .then(response => response.json())
       .then(data => {
-        console.log(JSON.stringify(`data: ${data.data}`))
-        setDocuments(data.data)
+        console.log(JSON.stringify(`data: ${data}`))
+        setDocuments(data)
       })
   },[]);
 
