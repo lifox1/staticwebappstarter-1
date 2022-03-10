@@ -25,7 +25,7 @@ export default function Body() {
   //const handleShowFail = () => setShowFail(true);
 
 
-  useEffect(async () => {
+  useEffect(() => {
     fetch('/api/leases')
       .then(response => response.json())
       .then(data => setDocuments(data))
