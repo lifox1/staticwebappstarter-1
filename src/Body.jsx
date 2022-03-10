@@ -107,7 +107,7 @@ export default function Body() {
   }
 
   const parseData = (documents) => {
-     console.log(`parseData : ${documents}`)
+     console.log(`parseData : ${JSON.stringify(documents)}`)
     if (documents && documents.data) {
       return (
         <>
