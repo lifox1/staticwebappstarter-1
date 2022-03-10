@@ -5,8 +5,8 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     context.log('HTTP trigger function processed a request.');
     const client = new CosmosClient(process.env.COSMOS_DB_CONNECTION_STRING);
 
-    const database = client.database(process.env.COSMOSDB_DB_NAME);
-    const container = database.container(process.env.COSMOSDB_CONTAINER_NAME);
+    const database = client.database(process.env.COSMOS_DB_DB);
+    const container = database.container(process.env.COSMOS_DB_CONTAINER);
     const querySpec = {
         query: "SELECT * FROM c",
         parameters: [
