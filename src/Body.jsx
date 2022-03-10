@@ -32,7 +32,7 @@ export default function Body() {
         console.log(JSON.stringify(`data: ${data}`))
         setDocuments(data)
       })
-  },[]);
+  }, []);
 
   const uploadToClient = async (event) => {
     try {
@@ -97,7 +97,7 @@ export default function Body() {
 
       console.log(JSON.stringify(values))
       return (
-        <div style={{padding : 30}}dangerouslySetInnerHTML={{ __html: currentText }}></div>
+        <div style={{ padding: 30 }} dangerouslySetInnerHTML={{ __html: currentText }}></div>
       );
     }
   }
@@ -107,11 +107,11 @@ export default function Body() {
   }
 
   const parseData = (documents) => {
-     console.log(`parseData : ${JSON.stringify(documents)}`)
-    if (documents && documents.data) {
+    console.log(`parseData : ${JSON.stringify(documents)}`)
+    if (documents) {
       return (
         <>
-          {documents.data.map(document => (
+          {documents.map(document => (
             <div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>
           ))}
         </>
@@ -141,7 +141,7 @@ export default function Body() {
       const keys = Object.keys(categories)
       const values = []
       for (const k of keys) {
-        values.push({ key : k, value : categories[k] })
+        values.push({ key: k, value: categories[k] })
       }
 
       console.log(JSON.stringify(values))
@@ -149,7 +149,7 @@ export default function Body() {
         <>
           {values.map(v => (
             <>
-              <div><span class="dot" style={{backgroundColor:v.value}  }></span> {v.key}</div>
+              <div><span class="dot" style={{ backgroundColor: v.value }}></span> {v.key}</div>
             </>
           ))}
         </>
@@ -192,7 +192,7 @@ export default function Body() {
         </div>
         <div className="documentTextParent">
           <div className="filenames">
-          {parseData(documents)}
+            {parseData(documents)}
           </div>
           <div className="documentText">
             {getText()}
