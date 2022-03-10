@@ -18,11 +18,11 @@ export default function Body() {
   //modal states
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const handleShow = () => setShow(true);
 
   const [showFail, setShowFail] = useState(false);
   const handleCloseFail = () => setShowFail(false);
-  const handleShowFail = () => setShowFail(true);
+  //const handleShowFail = () => setShowFail(true);
 
   const uploadToClient = async (event) => {
     try {
