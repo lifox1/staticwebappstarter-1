@@ -26,7 +26,7 @@ export default function Body() {
 
 
   useEffect(async () => {
-    fetch('https://orange-forest-0b2e5160f.1.azurestaticapps.net/api/leases')
+    fetch('/api/leases')
       .then(response => response.json())
       .then(data => setDocuments(data))
   });
