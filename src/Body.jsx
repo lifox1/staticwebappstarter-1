@@ -28,7 +28,10 @@ export default function Body() {
   useEffect(() => {
     fetch('/api/leases')
       .then(response => response.json())
-      .then(data => setDocuments(data))
+      .then(data => {
+        console.log(JSON.stringify(`data: ${data}`))
+        setDocuments(data)
+      })
   },[]);
 
   const uploadToClient = async (event) => {
