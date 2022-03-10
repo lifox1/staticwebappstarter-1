@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './styles/Home.module.css'
 import { Button, Modal } from 'react-bootstrap'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,9 +11,9 @@ export default function Body() {
   const [image, setImage] = useState(null);
 
   //const documentFetchResults = useSWR('/api/v1/leases', fetcher)
-  const documentFetchResults = []
 
   const [document, setDocument] = useState(null)
+  const [documents, setDocuments] = useState([])
 
   //modal states
   const [show, setShow] = useState(false);
@@ -23,6 +23,13 @@ export default function Body() {
   const [showFail, setShowFail] = useState(false);
   const handleCloseFail = () => setShowFail(false);
   //const handleShowFail = () => setShowFail(true);
+
+
+  useEffect(async () => {
+    fetch('https://orange-forest-0b2e5160f.1.azurestaticapps.net/api/leases')
+      .then(response => response.json())
+      .then(data => setDocuments(data))
+  });
 
   const uploadToClient = async (event) => {
     try {
@@ -181,7 +188,7 @@ export default function Body() {
         </div>
         <div className="documentTextParent">
           <div className="filenames">
-          {parseData(documentFetchResults)}
+          {parseData(documents)}
           </div>
           <div className="documentText">
             {getText()}
