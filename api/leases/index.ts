@@ -3,7 +3,7 @@ import { CosmosClient } from "@azure/cosmos";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
     context.log('HTTP trigger function processed a request.');
-    const client = new CosmosClient(process.env.COSMOS_CONNECTION_STRING);
+    const client = new CosmosClient(process.env.COSMOS_DB_CONNECTION_STRING);
 
     const database = client.database('jphdef2');
     const container = database.container('jphdef2');
