@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div class="topnav">
-            Business Process Automation Demo
+            My New Header
         </div>
     )
 }
