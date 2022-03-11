@@ -11,10 +11,10 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     // }
 
     // `filename` is required property to use multi-part npm package
-    if (!req.query?.filename) {
-        context.res.body = `filename is not defined`;
-        context.res.status = HTTP_CODES.BAD_REQUEST
-    }
+    // if (!req.query?.filename) {
+    //     context.res.body = `filename is not defined`;
+    //     context.res.status = HTTP_CODES.BAD_REQUEST
+    // }
 
     if (!req.body || !req.body.length){
         context.res.body = `Request body is not defined`;
@@ -27,7 +27,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         context.res.status = HTTP_CODES.BAD_REQUEST
     }    
 
-    context.log(`Filename:${req.query?.filename}, Content type:${req.headers["content-type"]}, Length:${req.body.length}`);
+    context.log(`Content type:${req.headers["content-type"]}, Length:${req.body.length}`);
     
     if(process?.env?.Environment==='Production' && (!process?.env?.AzureWebJobsStorage || process?.env?.AzureWebJobsStorage.length<10)){
         throw Error("Storage isn't configured correctly - get Storage Connection string from Azure portal");
@@ -54,7 +54,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         context.bindings.storage = parts[0]?.data;
 
         // returned to requestor
-        context.res.body = `${req.query?.filename}`;
+        context.res.body = `${parts[0]?.filename}`;
     } catch (err) {
         context.log.error(err.message);
         {

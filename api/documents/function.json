@@ -4,7 +4,6 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
-      "dataType": "binary",
       "name": "req",
       "methods": [
         "post"
@@ -18,10 +17,9 @@
     {
       "name": "storage",
       "type": "blob",
-      "path": "{filename}",
       "direction": "out",
-      "connection": "BLOB_STORAGE_CONNECTION_STRING"
-    }
+      "connection": "AzureWebJobsStorage"
+  }
   ],
   "scriptFile": "../dist/documents/index.js"
 }
