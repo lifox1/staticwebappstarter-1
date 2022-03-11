@@ -18,7 +18,7 @@
     {
       "name": "storage",
       "type": "blob",
-      "path": "{username}/{filename}",
+      "path": "{filename}",
       "direction": "out",
       "connection": "BLOB_STORAGE_CONNECTION_STRING"
     }
