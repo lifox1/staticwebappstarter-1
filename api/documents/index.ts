@@ -3,7 +3,7 @@ import HTTP_CODES from "http-status-enum";
 import * as multipart from "parse-multipart";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<any> {
-    context.log('upload HTTP trigger function processed a request. 2');
+    context.log('upload HTTP trigger function processed a request. 3');
 
     // if (!req.query?.username) {
     //     context.res.body = `username is not defined`;
