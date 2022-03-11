@@ -1,7 +1,6 @@
 {
   "bindings": [
     {
-      "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
       "name": "req",
@@ -18,7 +17,8 @@
       "name": "storage",
       "type": "blob",
       "direction": "out",
-      "connection": "AzureWebJobsStorage"
+      "path": "test",
+      "connection": "BLOB_STORAGE_CONNECTION_STRING"
   }
   ],
   "scriptFile": "../dist/documents/index.js"
