@@ -3,7 +3,7 @@ import HTTP_CODES from "http-status-enum";
 import * as multipart from "parse-multipart";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<any> {
-    context.log('upload HTTP trigger function processed a request.');
+    context.log('upload HTTP trigger function processed a request. 2');
 
     // if (!req.query?.username) {
     //     context.res.body = `username is not defined`;
@@ -11,10 +11,10 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     // }
 
     //`filename` is required property to use multi-part npm package
-    // if (!req.query?.filename) {
-    //     context.res.body = `filename is not defined`;
-    //     context.res.status = HTTP_CODES.BAD_REQUEST
-    // }
+    if (!req.query?.filename) {
+        context.res.body = `filename is not defined`;
+        context.res.status = HTTP_CODES.BAD_REQUEST
+    }
 
     if (!req.body || !req.body.length){
         context.res.body = `Request body is not defined`;
