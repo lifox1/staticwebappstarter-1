@@ -10,7 +10,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     //     context.res.status = HTTP_CODES.BAD_REQUEST
     // }
 
-    // `filename` is required property to use multi-part npm package
+    //`filename` is required property to use multi-part npm package
     // if (!req.query?.filename) {
     //     context.res.body = `filename is not defined`;
     //     context.res.status = HTTP_CODES.BAD_REQUEST
