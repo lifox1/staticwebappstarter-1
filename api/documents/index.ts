@@ -1,5 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import formidable from 'formidable';
+const formidable = require('formidable');
 import * as fs from 'fs';
 import { upload2BlobStorage } from "./uploadBlob";
 
