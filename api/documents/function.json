@@ -4,16 +4,23 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
+      "dataType": "binary",
       "name": "req",
       "methods": [
-        "post",
-        "get"
+        "post"
       ]
     },
     {
       "type": "http",
       "direction": "out",
-      "name": "res"
+      "name": "$return"
+    },
+    {
+      "name": "storage",
+      "type": "blob",
+      "path": "{username}/{filename}",
+      "direction": "out",
+      "connection": "BLOB_STORAGE_CONNECTION_STRING"
     }
   ],
   "scriptFile": "../dist/documents/index.js"
