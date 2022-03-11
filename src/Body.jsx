@@ -46,7 +46,7 @@ export default function Body() {
           const body = new FormData();
           body.append("file", i);
           console.log("sending...")
-          const response = await fetch("/api/v1/documents/upload", {
+          const response = await fetch("/api/documents/upload", {
             method: "POST",
             body
           });
