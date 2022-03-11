@@ -5,10 +5,10 @@ import * as multipart from "parse-multipart";
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<any> {
     context.log('upload HTTP trigger function processed a request.');
 
-    if (!req.query?.username) {
-        context.res.body = `username is not defined`;
-        context.res.status = HTTP_CODES.BAD_REQUEST
-    }
+    // if (!req.query?.username) {
+    //     context.res.body = `username is not defined`;
+    //     context.res.status = HTTP_CODES.BAD_REQUEST
+    // }
 
     // `filename` is required property to use multi-part npm package
     if (!req.query?.filename) {
@@ -27,7 +27,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         context.res.status = HTTP_CODES.BAD_REQUEST
     }    
 
-    context.log(`*** Username:${req.query?.username}, Filename:${req.query?.filename}, Content type:${req.headers["content-type"]}, Length:${req.body.length}`);
+    context.log(`Filename:${req.query?.filename}, Content type:${req.headers["content-type"]}, Length:${req.body.length}`);
     
     if(process?.env?.Environment==='Production' && (!process?.env?.AzureWebJobsStorage || process?.env?.AzureWebJobsStorage.length<10)){
         throw Error("Storage isn't configured correctly - get Storage Connection string from Azure portal");
@@ -54,7 +54,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
         context.bindings.storage = parts[0]?.data;
 
         // returned to requestor
-        context.res.body = `${req.query?.username}/${req.query?.filename}`;
+        context.res.body = `${req.query?.filename}`;
     } catch (err) {
         context.log.error(err.message);
         {
