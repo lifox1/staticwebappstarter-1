@@ -78,16 +78,14 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
                  iv. Select Personal access tokens
                  v. Select Generate personal access token
                  vi. Under Select scopes, select the checkbox for workflow
- 
+                 vii. Add your own description
+                 viii. Select Generate token
+                 ix. Copy your newly generated token *Note be sure to save this token for completing pipeline setup, else this token will need to be regenerated
+                 v. Paste your newly generated token in the repositoryToken filed
+                 vi. Under Select scopes, select the checkbox for workflow               
 
- ---fork 'static' - which is the front end repo - to your own repo
- ------copy url <> 
- ---go to settings / developer settings / go to personal access token, select "workflow" level, create token name. Copy and save this token somewhere for future use (if lost a new token will need to be geenreated
-### click save and run. insert any commit message
+### 5. Select save and run. insert any commit message
  You should see the pipeline stages workflow updating
-
-6. Create Service Connection
-
 
 
 
