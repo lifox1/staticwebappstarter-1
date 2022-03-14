@@ -46,17 +46,26 @@ For this repository our target audience includes data scientists and machine lea
 ### 4. Setting up Azure DevOps Pipeline
 You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
 ###     1. Navigate to Azure DevOps www.dev.azure.com
-###     1. Select Repos
-###     1. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
+###     2. Select Repos
+###     3. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
  Cloning may take several minutes. Your cloned repository should mirror the below directory:
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/cloned_repository.png)
-###     1. Project settings (bottom left)
+###     4. Project settings (bottom left)
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/project_settings.png)
-###     1. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
- * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
- * 
-###     1. Create pipeline
-###     2. update lines 12-17
+###     5. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
+            a. Click Service Connections in left navigation pane
+            b. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
+            c. Select Azure Resource Manager
+            d. Select your subscription
+            e. Input the same Resource group and Service connection name 
+            f. Select the checkbox for "Grant access permission to all pipelines
+       * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
+###     6. Define Pipeline
+            a. Navigate back to Pipelines in your left Navigation Pane
+            b. Select Create Pipeline
+            c. Select Azure Repos Git
+            d. Select your previously cloned repo
+###     7. update lines 12-17
  ---azure subscription = service connection previously created
  ---project name has to be unique
  ---fill in resource group
