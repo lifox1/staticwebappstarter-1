@@ -1,6 +1,6 @@
 # Document Processing Accelerator
 
-## React basic
+## React basic [This Section to be moved to References Section at End]
 
 [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site.
 
@@ -8,7 +8,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Overview
 The goal of this repository is to build a comprehensive set of tools and examples to automate the deployment of a functional, and customizable, POC UI for document processing.
+
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/web_app_ui.png)
+
 
 This repo contains all of the tools required to deploy an end-to-end pipeline with Azure to ingest, process, inference, and visualize document processing.
 
