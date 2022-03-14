@@ -70,10 +70,16 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
              b. project name has to be unique (this name is used across most of the services created during this accelerator)
              c. fill in resource group
              d. Select your desired location
-             d. Select your previously cloned repo
- ---azure subscription = service connection previously created
- ---project name has to be unique
- ---fill in resource group
+             e. Select your previously cloned repo's URI.
+             f. Find your repository token
+                 i. On your github repo page, click your profile
+                 ii. Select settings
+                 iii. Select Developer settings at bottom of left navigation pane
+                 iv. Select Personal access tokens
+                 v. Select Generate personal access token
+                 vi. Under Select scopes, select the checkbox for workflow
+ 
+
  ---fork 'static' - which is the front end repo - to your own repo
  ------copy url <> 
  ---go to settings / developer settings / go to personal access token, select "workflow" level, create token name. Copy and save this token somewhere for future use (if lost a new token will need to be geenreated
