@@ -24,7 +24,7 @@ I-LOC: Location
 I-ORG: Organization  
 I-PER: Person  
 
-There are a few standard labeling schemes and you can find the details here. The data can also be labeled with custom entities as required by the use case.
+There are a few standard labeling schemes and you can find the details [here](http://cs229.stanford.edu/proj2005/KrishnanGanapathy-NamedEntityRecognition.pdf). The data can also be labeled with custom entities as required by the use case.
 ## Target Audience
 For this repository our target audience includes data scientists and machine learning engineers with varying levels of NLP knowledge as our content is source-only and targets custom machine learning modelling. The utilities and examples provided are intended to be solution accelerators for real-world NLP problems.
 
