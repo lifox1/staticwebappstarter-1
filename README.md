@@ -32,6 +32,16 @@ For this repository our target audience includes data scientists and machine lea
 
 ## Prerequisities
 
+## Installation Steps
+### 1. Clone repo https://github.com/jameshoff-msft/bpa-backend
+### 2. Create a Resource Group in your Azure Portal
+### 3. Import Git Repo
+### 4. Setting up Azure DevOps Pipeline
+###     1. Create Service Connection
+6. Create Service Connection
+
+
+
 
 ## Roadmap
 
