@@ -86,6 +86,18 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 
 ### 5. Select save and run. insert any commit message
  You should see the pipeline stages workflow updating
+ 
+ more stuff here
+ 
+ ### 6. Retrieve front end
+         1. Navigate to your Resource Group within your Azure Portal <insert static web app screenshot here>
+         2. Select your static webapp
+         3. Within the default Overview pane, Select your URL to navigate to the WebApp, this take you to the newly launched WebApp!
+ 
+ ### 7. Load Documents!
+         a. Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
+         b. Check for you newly found custom entities!
+ 
 
 
 
