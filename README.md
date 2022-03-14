@@ -65,7 +65,12 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
             b. Select Create Pipeline
             c. Select Azure Repos Git
             d. Select your previously cloned repo
-###     7. update lines 12-17
+###     7. Review your Pipeline YAML - update lines 12-17
+             a. azure subscription = service connection previously created
+             b. project name has to be unique (this name is used across most of the services created during this accelerator)
+             c. fill in resource group
+             d. Select your desired location
+             d. Select your previously cloned repo
  ---azure subscription = service connection previously created
  ---project name has to be unique
  ---fill in resource group
