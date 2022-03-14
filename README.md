@@ -37,7 +37,17 @@ For this repository our target audience includes data scientists and machine lea
 ### 2. Create a Resource Group in your Azure Portal
 ### 3. Import Git Repo
 ### 4. Setting up Azure DevOps Pipeline
+You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
+###     1. Navigate to Azure DevOps www.dev.azure.com
+###     1. Select Repos
+###     1. Select Import a Repository
 ###     1. Create Service Connection
+###     1. Create Service Connection
+###     1. Create Service Connection
+###     2. Create Pipeline
+###     3. Fill out 4 fields
+### N
+
 6. Create Service Connection
 
 
