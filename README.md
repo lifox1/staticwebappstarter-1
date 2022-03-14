@@ -9,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Overview
 The goal of this repository is to build a comprehensive set of tools and examples
 
+<Insert screenshot of output here>
+
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/Sample_Architecture1.png)
 
 ## Algorithms
@@ -31,6 +33,10 @@ There are a few standard labeling schemes and you can find the details [here](ht
 For this repository our target audience includes data scientists and machine learning engineers with varying levels of NLP knowledge as our content is source-only and targets custom machine learning modelling. The utilities and examples provided are intended to be solution accelerators for real-world NLP problems.
 
 ## Prerequisities
+1. Github account
+2. Resource group access
+    a. Select preferred region
+3. 
 
 ## Installation Steps
 ### 1. Clone repo https://github.com/jameshoff-msft/bpa-backend
@@ -40,13 +46,21 @@ For this repository our target audience includes data scientists and machine lea
 You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
 ###     1. Navigate to Azure DevOps www.dev.azure.com
 ###     1. Select Repos
-###     1. Select Import a Repository
-###     1. Create Service Connection
-###     1. Create Service Connection
-###     1. Create Service Connection
-###     2. Create Pipeline
-###     3. Fill out 4 fields
-### N
+###     1. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
+###     1. Project settings (bottom left)
+###     1. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
+ * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
+ * 
+###     1. Create pipeline
+###     2. update lines 12-17
+ ---azure subscription = service connection previously created
+ ---project name has to be unique
+ ---fill in resource group
+ ---fork 'static' - which is the front end repo - to your own repo
+ ------copy url <> 
+ ---go to settings / developer settings / go to personal access token, select "workflow" level, create token name. Copy and save this token somewhere for future use (if lost a new token will need to be geenreated
+### click save and run. insert any commit message
+ You should see the pipeline stages workflow updating
 
 6. Create Service Connection
 
