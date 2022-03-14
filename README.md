@@ -52,37 +52,37 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/cloned_repository.png)
 ###     4. Project settings (bottom left)
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/project_settings.png)
-###     5. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
-       a. Click Service Connections in left navigation pane
-       b. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
-       c. Select Azure Resource Manager
-       d. Select your subscription
-       e. Input the same Resource group and Service connection name 
-       f. Select the checkbox for "Grant access permission to all pipelines
+###     5. Create Service Connection
+1. Click Service Connections in left navigation pane
+2. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
+3. Select Azure Resource Manager
+4. Select your subscription
+5. Input the same Resource group and Service connection name 
+6. Select the checkbox for "Grant access permission to all pipelines
        * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
 ###     6. Define Pipeline
-            a. Navigate back to Pipelines in your left Navigation Pane
-            b. Select Create Pipeline
-            c. Select Azure Repos Git
-            d. Select your previously cloned repo
+1. Navigate back to Pipelines in your left Navigation Pane
+2. Select Create Pipeline
+3. Select Azure Repos Git
+4. Select your previously cloned repo
 ###     7. Review your Pipeline YAML - update lines 12-17
-             a. azure subscription = service connection previously created
-             b. project name has to be unique (this name is used across most of the services created during this accelerator)
-             c. fill in resource group
-             d. Select your desired location
-             e. Select your previously cloned repo's URI.
-             f. Find your repository token
-                 i. On your github repo page, click your profile
-                 ii. Select settings
-                 iii. Select Developer settings at bottom of left navigation pane
-                 iv. Select Personal access tokens
-                 v. Select Generate personal access token
-                 vi. Under Select scopes, select the checkbox for workflow
-                 vii. Add your own description
-                 viii. Select Generate token
-                 ix. Copy your newly generated token *Note be sure to save this token for completing pipeline setup, else this token will need to be regenerated
-                 v. Paste your newly generated token in the repositoryToken filed
-                 vi. Under Select scopes, select the checkbox for workflow               
+1. azure subscription = service connection previously created
+2. project name has to be unique (this name is used across most of the services created during this accelerator)
+3. fill in resource group
+4. Select your desired location
+5. Select your previously cloned repo's URI.
+6. Find your repository token
+  i. On your github repo page, click your profile
+  ii. Select settings
+  iii. Select Developer settings at bottom of left navigation pane
+  iv. Select Personal access tokens
+  v. Select Generate personal access token
+  vi. Under Select scopes, select the checkbox for workflow
+  vii. Add your own description
+  viii. Select Generate token
+  ix. Copy your newly generated token *Note be sure to save this token for completing pipeline setup, else this token will need to be regenerated
+  v. Paste your newly generated token in the repositoryToken filed
+  vi. Under Select scopes, select the checkbox for workflow               
 
 ### 5. Select save and run. insert any commit message
  You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs <insert screenshot here>. You can monitor the detailed log by clicking here <insert screenshot here>
