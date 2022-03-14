@@ -9,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Overview
 The goal of this repository is to build a comprehensive set of tools and examples
 
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/Sample_Architecture1.png)
+
 ## Algorithms
 ### Text Classification
 Text classification is a supervised learning method of learning and predicting the category or the class of a document given its text content. The state-of-the-art methods are based on neural networks of different architectures as well as pre-trained language models or word embeddings.
