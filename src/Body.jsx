@@ -157,6 +157,28 @@ export default function Body() {
     }
   }
 
+  const renderBody = () => {
+    if (documents && documents.size > 0) {
+      return (<div className="documentTextParent">
+        <div className="filenames">
+          {parseData(documents)}
+        </div>
+        <div className="documentText">
+          {getText()}
+        </div>
+        <div >
+          {showLegend()}
+        </div>
+
+      </div>)
+    } else {
+      return (
+        <div>No Content Uploaded</div>
+      )
+    }
+
+  }
+
 
   return (
 
@@ -190,7 +212,8 @@ export default function Body() {
             Select PDF File
           </label>
         </div>
-        <div className="documentTextParent">
+        {renderBody()}
+        {/* <div className="documentTextParent">
           <div className="filenames">
             {parseData(documents)}
           </div>
@@ -201,7 +224,7 @@ export default function Body() {
             {showLegend()}
           </div>
 
-        </div>
+        </div> */}
 
       </main>
 
