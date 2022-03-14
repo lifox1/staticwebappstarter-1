@@ -48,6 +48,8 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 ###     1. Navigate to Azure DevOps www.dev.azure.com
 ###     1. Select Repos
 ###     1. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
+ Cloning may take several minutes. Your cloned repository should mirror the below directory:
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/cloned_repository.png)
 ###     1. Project settings (bottom left)
 ###     1. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
  * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
