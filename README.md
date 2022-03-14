@@ -53,12 +53,12 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 ###     4. Project settings (bottom left)
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/project_settings.png)
 ###     5. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
-            a. Click Service Connections in left navigation pane
-            b. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
-            c. Select Azure Resource Manager
-            d. Select your subscription
-            e. Input the same Resource group and Service connection name 
-            f. Select the checkbox for "Grant access permission to all pipelines
+       a. Click Service Connections in left navigation pane
+       b. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
+       c. Select Azure Resource Manager
+       d. Select your subscription
+       e. Input the same Resource group and Service connection name 
+       f. Select the checkbox for "Grant access permission to all pipelines
        * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
 ###     6. Define Pipeline
             a. Navigate back to Pipelines in your left Navigation Pane
