@@ -36,7 +36,8 @@ For this repository our target audience includes data scientists and machine lea
 1. Github account
 2. Resource group access
     a. Select preferred region
-3. 
+3. Ensure that you have accepted terms and conditions for Responsible AI
+ "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
 ## Installation Steps
 ### 1. Clone repo https://github.com/jameshoff-msft/bpa-backend
