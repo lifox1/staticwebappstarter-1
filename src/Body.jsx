@@ -158,7 +158,7 @@ export default function Body() {
   }
 
   const renderBody = () => {
-    if (documents && documents.size > 0) {
+    if (documents && documents.length > 0) {
       return (<div className="documentTextParent">
         <div className="filenames">
           {parseData(documents)}
