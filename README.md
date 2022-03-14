@@ -51,6 +51,7 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
  Cloning may take several minutes. Your cloned repository should mirror the below directory:
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/cloned_repository.png)
 ###     1. Project settings (bottom left)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/project_settings.png)
 ###     1. Create Service Connection - 3rd one azure resource manager. Select 'grant access to all pipelines'
  * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
  * 
