@@ -85,7 +85,7 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
                  vi. Under Select scopes, select the checkbox for workflow               
 
 ### 5. Select save and run. insert any commit message
- You should see the pipeline stages workflow updating
+ You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs <insert screenshot here>. You can monitor the detailed log by clicking here <insert screenshot here>
  
  more stuff here
  
