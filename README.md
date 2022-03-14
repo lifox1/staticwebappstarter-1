@@ -14,9 +14,9 @@ The goal of this repository is to build a comprehensive set of tools and example
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/Sample_Architecture1.png)
 
 ## Algorithms
-### Text Classification
+#### Text Classification
 Text classification is a supervised learning method of learning and predicting the category or the class of a document given its text content. The state-of-the-art methods are based on neural networks of different architectures as well as pre-trained language models or word embeddings.
-### Custom Named Entity Recognition
+#### Custom Named Entity Recognition
 Named Entity Recognition (NER) is the task of detecting and classifying real-world objects mentioned in text. Common named entities include person names, locations, organizations, etc. The state-of-the art NER methods include combining Long Short-Term Memory neural network with Conditional Random Field (LSTM-CRF) and pretrained language models like BERT.
 
 NER usually involves assigning an entity label to each word in a sentence as shown in the figure below.
