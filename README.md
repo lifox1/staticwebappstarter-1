@@ -22,7 +22,7 @@
 [Contacts](#contacts)  
 [Roadmap](#roadmap)
 [References](#references)  
-
+---
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
