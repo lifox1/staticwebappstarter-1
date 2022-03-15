@@ -56,7 +56,8 @@ Input a Project name. And Select a Visibility setting (currently tested with Pri
 
 ####     3. Select Repos
 ####     4. Select Import a Repository 
-Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field
+Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field. This repo is used for the POC backend, e.g. creating backend Cognitive Service, Azure functions, and managing credentials
+
 **Note** *You may leave Requires Authentication unchecked*
  Cloning may take several minutes. 
  
@@ -78,7 +79,8 @@ This Service Connection will allow Azure DevOps to manage resources within your 
 4. Select your subscription level 
     a. Subscription level scope is recommended. 
     b. Select your Subscription.
-    c. Define Service Connection name
+    c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps(
+    **Note** :*Recommended all lower case alphanumeric only*
     d. check the box for Grant access permission to all pipelines
     
     ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission)
@@ -93,12 +95,21 @@ This Service Connection will allow Azure DevOps to manage resources within your 
 3. Select Azure Repos Git
 4. Select your previously cloned repo
 
-####     8. Review your Pipeline YAML - update lines 12-17
+####     8. Fork the below repository to the same Github that was used previously
+https://github.com/jameshoff-msft/staticwebappstarter
+This repo is used for the POC front end
+1. Ensure you are still logged into your github repo
+2. Navigate to the above repo
+3. Select Fork in upper right menu
+4. Select your github account
+We will use the link (github.com/<my account name>/staticwebappstarter) to this newly forked repo in the next steps
+
+####     9. Review your Pipeline YAML - update lines 12-17
 1. Azure subscription = service connection previously created
-2. Project name has to be unique (this name is used across most of the services created during this accelerator)
-3. Fill in resource group
+2. Fill in Project name - must be unique (this name is used across most of the services created during this accelerator)
+3. Fill in resource group name
 4. Select your desired location
-5. Select your previously cloned repo's URI.
+5. Select your previously cloned repo's staticwebappstarter URI.
 6. Find your repository token
   i. On your github repo page, click your profile
   ii. Select settings
@@ -108,7 +119,8 @@ This Service Connection will allow Azure DevOps to manage resources within your 
   vi. Under Select scopes, select the checkbox for workflow
   vii. Add your own description
   viii. Select Generate token
-  ix. Copy your newly generated token *Note be sure to save this token for completing pipeline setup, else this token will need to be regenerated
+  ix. Copy your newly generated token 
+ **Note**:* be sure to save this token for completing pipeline setup, else this token will need to be regenerated
   v. Paste your newly generated token in the repositoryToken filed
   vi. Under Select scopes, select the checkbox for workflow               
 
