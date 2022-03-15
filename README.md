@@ -36,6 +36,7 @@ For this repository our target audience includes data scientists and machine lea
 2. Ensure your subscription has Microsoft.DocumentDB enabled 
 
 ![image](https://user-images.githubusercontent.com/11619148/158391730-1badf943-e8fc-4e93-9684-4f9d63040be2.png)
+
 3. Ensure that you have accepted terms and conditions for Responsible AI
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
@@ -69,7 +70,7 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
  
 ####    5. Project settings (bottom left)
 
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings.png)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings2.png)
  
 ####     6. Create Service Connection
 This Service Connection will allow Azure DevOps to manage resources within your newly created Resource Group
@@ -129,7 +130,7 @@ You should see the pipeline stages workflow updating. Pipeline deployment will g
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png)
  
- You can monitor the detailed log by clicking here <insert screenshot here>
+ You can monitor the detailed log by clicking here:
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png)
  
@@ -138,7 +139,7 @@ You should see the pipeline stages workflow updating. Pipeline deployment will g
 2. Select your static webapp
 3. Within the default Overview pane, Select your URL to navigate to the WebApp, this take you to the newly launched WebApp!
  
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app.png)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app2.png)
  
  ## 6. Load Documents!
 1. Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
