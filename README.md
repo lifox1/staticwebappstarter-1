@@ -117,10 +117,19 @@ You should see the pipeline stages workflow updating. Pipeline deployment will g
  
   ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
-
+## Contacts
+ Please reach out to the AI Rangers for more info or feedback aka.ms/AIRangers
 
 ## Roadmap
+| Priority | Item |
+| ------- | ------------- |
+| Impending | Add standard NER capability from Language Service [What is Named Entity Recognition (NER) in Azure Cognitive Service for Language](https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview#:~:text=Named%20Entity%20Recognition%20(NER)%20is,categorize%20entities%20in%20unstructured%20text.)  |
+| TBD | Add text summarization |
+| TBD | ... |
+ 
 
 ## References
-https://github.com/microsoft/nlp-recipes/tree/master/examples/named_entity_recognition
-https://github.com/microsoft/nlp-recipes/tree/master/examples/text_classification
+| Subject | Source (Link) |
+| ------- | ------------- |
+| Custom NER |  https://github.com/microsoft/nlp-recipes/tree/master/examples/named_entity_recognition |
+| Text Classification | https://github.com/microsoft/nlp-recipes/tree/master/examples/text_classification |
