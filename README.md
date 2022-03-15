@@ -39,6 +39,7 @@ To check:
     b. Select Resource Providers at bottom of left navigation pane
     c. Within the Filter by name menu, search for Microsoft.DocumentDB
     d. Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"
+    **Note**:*This process may take several seconds/minutes, be sure to refresh the entire browser periodically
 3. Ensure that you have accepted terms and conditions for Responsible AI
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
@@ -57,7 +58,7 @@ Input a Project name. And Select a Visibility setting (currently tested with Pri
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/create_project.png)
 
-####     3. Select Repos
+####     3. Select Repos in left Navigation pane
 ####     4. Select Import a Repository 
 Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field. This repo is used for the POC backend, e.g. creating backend Cognitive Service, Azure functions, and managing credentials
 
@@ -82,14 +83,14 @@ This Service Connection will allow Azure DevOps to manage resources within your 
 4. Select your subscription level 
     a. Subscription level scope is recommended. 
     b. Select your Subscription.
-    c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps(
+    c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps  
     **Note** :*Recommended all lower case alphanumeric only*
     d. check the box for Grant access permission to all pipelines
     
-    ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission)
+    ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission.png)
     
 5. Input the same Resource group and Service connection name 
-6. Select the checkbox for "Grant access permission to all pipelines
+6. Select the checkbox for "Grant access permission to all pipelines  
        **Note** *alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
        
 ####     7. Define Pipeline
@@ -107,32 +108,32 @@ This repo is used for the POC front end
 4. Select your github account
 We will use the link (github.com/<my account name>/staticwebappstarter) to this newly forked repo in the next steps
 
-####     9. Review your Pipeline YAML - update lines 12-17
+####     9. Review your Pipeline YAML - Update lines 12-17
 1. Azure subscription = service connection previously created
 2. Fill in Project name - must be unique (this name is used across most of the services created during this accelerator)
 3. Fill in resource group name
 4. Select your desired location
 5. Select your previously cloned repo's staticwebappstarter URI.
 6. Find your repository token
-  i. On your github repo page, click your profile
-  ii. Select settings
-  iii. Select Developer settings at bottom of left navigation pane
-  iv. Select Personal access tokens
-  v. Select Generate personal access token
-  vi. Under Select scopes, select the checkbox for workflow
-  vii. Add your own description
-  viii. Select Generate token
-  ix. Copy your newly generated token 
- **Note**:* be sure to save this token for completing pipeline setup, else this token will need to be regenerated
-  v. Paste your newly generated token in the repositoryToken filed
-  vi. Under Select scopes, select the checkbox for workflow               
+  i. On your github repo page, click your profile  
+  ii. Select settings  
+  iii. Select Developer settings at bottom of left navigation pane  
+  iv. Select Personal access tokens  
+  v. Select Generate personal access token  
+  vi. Under Select scopes, select the checkbox for workflow  
+  vii. Add your own description  
+  viii. Select Generate token  
+  ix. Copy your newly generated token  
+ **Note**:* be sure to save this token for completing pipeline setup, else this token will need to be regenerated  
+  v. Paste your newly generated token in the repositoryToken filed  
+  vi. Under Select scopes, select the checkbox for workflow  
 
-## 4. Select save and run. insert any commit message
-You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
+## 4. Save and run!
+Insert any commit message. You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png)
  
- You can monitor the detailed log by clicking here:
+ You can drill into each stage for a more detailed log.
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png)
  
@@ -144,13 +145,13 @@ You should see the pipeline stages workflow updating. Pipeline deployment will g
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app2.png)
  
  ## 6. Load Documents!
-1. Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
+Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_blank.png)
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_file_upload_successful.png)
 
-2. Check for you newly found custom entities!
+Check for you newly found custom entities!
  
   ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
