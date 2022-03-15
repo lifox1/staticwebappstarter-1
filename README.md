@@ -32,7 +32,7 @@
 - [References](#references)  
 ---
 
-![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui3.png)
 
 
 ## Architecture
@@ -82,7 +82,7 @@ Select your preferred Region
 ####    2. Create a new Project
 Input a Project name. And Select a Visibility setting (currently tested with Private)
 
-![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/create_project.png)
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/create_project2.png)
 
 ####     3. Select Repos in left Navigation pane
 ####     4. Select Import a Repository 
