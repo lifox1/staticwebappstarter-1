@@ -7,7 +7,7 @@
 [Installation Steps](#installation-steps)  
 - [Clone starter backend repo](r#1-clone-the-starter-backend-repo)  
 - [Set Up Resource Group](#2-set-up-resource-group)  
-- [Set up Azure DevOps Pipeline]](#3-setting-up-azure-devops-pipeline)  
+- [Set up Azure DevOps Pipeline](#3-setting-up-azure-devops-pipeline)  
     - [Navigate to Azure](#1-navigate-to-azure-devops-wwwdevazurecom)
     - [Create a New Project](#2-create-a-new-project)
     - [Select Repo](#3-select-repos-in-left-navigation-pane)  
@@ -15,10 +15,10 @@
     - [Navigate to Project Settings](#navigate-to-project-settings)
     - [Create Service Connection](#create-service-connection)  
     - [Define Pipeline](#define-pipeline)  
-    - [Review your Pipeline YAML - Update lines 12-17](#9-review-your-pipeline-yaml---update-lines-12-17)  
-- [Save and Run!](#save-and-run!)  
-- [Jump to UI](#retrieve-front-end)  
-- [Load Documents!](#load-documents!)  
+    - [Review your Pipeline YAML](#9-review-your-pipeline-yaml)  
+[Save and Run!](#save-and-run!)  
+[Launch App](#load-app)  
+[Load Documents!](#load-documents!)  
 [Contacts](#contacts)  
 [Roadmap](#roadmap)
 [References](#references)  
@@ -134,7 +134,8 @@ This repo is used for the POC front end
 4. Select your github account
 We will use the link (github.com/<my account name>/staticwebappstarter) to this newly forked repo in the next steps
 
-####     9. Review your Pipeline YAML - Update lines 12-17
+####     9. Review your Pipeline YAML
+We'll only need to update lines 12-17, with the following instructions instructions
 1. Azure subscription = service connection previously created
 2. Fill in Project name - must be unique (this name is used across most of the services created during this accelerator)
 3. Fill in resource group name
@@ -154,7 +155,7 @@ We will use the link (github.com/<my account name>/staticwebappstarter) to this 
   v.   Paste your newly generated token in the repositoryToken filed  
   vi.  Under Select scopes, select the checkbox for workflow  
 
-## 4. Save and run!
+## 4. Save and Run!
 Insert any commit message. You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png)
@@ -163,7 +164,7 @@ Insert any commit message. You should see the pipeline stages workflow updating.
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png)
  
- ## 5. Retrieve front end
+ ## 5. Launch App
 1. Navigate to your Resource Group within your Azure Portal <insert static web app screenshot here>
 2. Select your static webapp
 3. Within the default Overview pane, Select your URL to navigate to the WebApp, this take you to the newly launched WebApp!
