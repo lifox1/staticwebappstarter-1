@@ -75,7 +75,7 @@ Clone https://github.com/jameshoff-msft/bpa-backend to your github account
 ### 2. Create a Resource Group in your Azure Portal
 Select your preferred Region
 ### 3. Setting up Azure DevOps Pipeline
-**Note**: You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
+**Note**: You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops).)
 
 
 ####    1. Navigate to Azure DevOps www.dev.azure.com
