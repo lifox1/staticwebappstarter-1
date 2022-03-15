@@ -22,6 +22,7 @@
     - [Navigate to Project Settings](#5-navigate-to-project-settings)
     - [Create Service Connection](#6-create-service-connection)  
     - [Define Pipeline](#7-define-pipeline)  
+    - [Clone UI Repo](#clone-ui-repo)
     - [Review your Pipeline YAML](#8--review-your-pipeline-yaml)  
 - [Save and Run!](#save-and-run!)  
 - [Launch App](#load-app)  
@@ -125,7 +126,8 @@ Select Next.
 3. Select Azure Repos Git
 4. Select your previously cloned repo
 
-####     8. Fork the below repository to the same Github that was used previously
+####     8. Clone UI repo
+Fork the below repository to the same Github that was used previously
 https://github.com/jameshoff-msft/staticwebappstarter
 This repo is used for the POC front end
 1. Ensure you are still logged into your github repo
