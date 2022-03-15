@@ -22,7 +22,7 @@ Named Entity Recognition (NER) is the task of detecting and classifying real-wor
 
 NER usually involves assigning an entity label to each word in a sentence, such as the entities shown below:
 
-O: Not an entity (i.e. All other words)
+O: Not an entity (i.e. All other words)  
 I-LOC: Location  
 I-ORG: Organization  
 I-PER: Person  
@@ -33,10 +33,12 @@ For this repository our target audience includes data scientists and machine lea
 
 ## Prerequisities
 1. Github account
-2. Ensure your subscription has Microsoft.DocumentDB enabled 
-
-![image](https://user-images.githubusercontent.com/11619148/158391730-1badf943-e8fc-4e93-9684-4f9d63040be2.png)
-
+2. Ensure your subscription has Microsoft.DocumentDB enabled
+To check:
+    a. Go to your subscription within portal.azure.com
+    b. Select Resource Providers at bottom of left navigation pane
+    c. Within the Filter by name menu, search for Microsoft.DocumentDB
+    d. Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"
 3. Ensure that you have accepted terms and conditions for Responsible AI
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
