@@ -107,15 +107,16 @@ This Service Connection will allow Azure DevOps to manage resources within your 
 1. Click Service Connections in left navigation pane
 2. Select Create service connection - This authorizes Azure DevOps to manage your Azure resources on your behalf.  
 Select Next.
-3. Select Azure Resource Manager **Note**: *Service principal option is recommended*
+3. Select Azure Resource Manager 
+    **Note**: *Service principal option is recommended*
 4. Select your subscription level 
     a. Subscription level scope is recommended.  
     b. Select your Subscription.  
     c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps    
     **Note** :*Recommended all lower case alphanumeric only*  
-    d. check the box for Grant access permission to all pipelines
+    d. check the box for Grant access permission to all pipelines  
     
-    ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission.png)
+    ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission.png)  
     
 5. Input the same Resource group and Service connection name 
 6. Select the checkbox for "Grant access permission to all pipelines  
@@ -128,13 +129,14 @@ Select Next.
 4. Select your previously cloned repo
 
 ####     8. Clone UI repo
+This repo is used for the POC front end.    
 Fork the below repository to the same Github that was used previously
 https://github.com/jameshoff-msft/staticwebappstarter
-This repo is used for the POC front end
+
 1. Ensure you are still logged into your github repo
 2. Navigate to the above repo
 3. Select Fork in upper right menu
-4. Select your github account
+4. Select your github account  
 We will use the link (github.com/<my account name>/staticwebappstarter) to this newly forked repo in the next steps
 
 ####     9. Review your Pipeline YAML
@@ -146,7 +148,7 @@ We'll only need to update lines 12-17, with the following instructions instructi
 5. Select your previously cloned repo's staticwebappstarter URI.
 6. Find your repository token
   i.   On your github repo page, click your profile  
-  ii.  Select settings  
+  ii.  Select Settings  
   iii. Select Developer settings at bottom of left navigation pane  
   iv.  Select Personal access tokens  
   v.   Select Generate personal access token  
@@ -154,8 +156,8 @@ We'll only need to update lines 12-17, with the following instructions instructi
   vii. Add your own description  
   viii. Select Generate token  
   ix.  Copy your newly generated token  
- **Note**:* be sure to save this token for completing pipeline setup, else this token will need to be regenerated  
-  v.   Paste your newly generated token in the repositoryToken filed  
+  **Note**: *be sure to save this token for completing pipeline setup, else this token will need to be regenerated*  
+  v.   Paste your newly generated token in the repositoryToken field  
   vi.  Under Select scopes, select the checkbox for workflow  
 
 ## 4. Save and Run!
@@ -175,7 +177,8 @@ Insert any commit message. You should see the pipeline stages workflow updating.
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app2.png)
  
  ## 6. Load Documents!
-Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
+Use the Select PDF File to load your documents  
+  **Note**: *your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster*
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_blank2.png)
  
