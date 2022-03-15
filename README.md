@@ -1,6 +1,6 @@
 # Document Processing Accelerator
 
-## Overview [This Section to be moved to References Section at End]
+## Overview
 
 [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment, without any coding.
 
@@ -8,8 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
-## Architectural Overview
-(James to udpate) Once you've created a high-level Resource group, you'll create a high-level Azure DevOps pipeline and import/clone this repo, automatically importing helper libraries and taking advantage of Azure functions to deploy the set of Azure Cognitive Services and manage all of the new Azure module credentials, in the background, within your newly created pipeline. Once the pipeline is deployed, a static webapp will be created with your newly customizable POC UI for document processing!
+## Architecture Overview
+(James to udpate) Once you've created a high-level Resource Group, you'll create a high-level Azure DevOps pipeline and import/clone this repo, automatically importing helper libraries and taking advantage of Azure functions to deploy the set of Azure Cognitive Services and manage all of the new Azure module credentials, in the background, within your newly created pipeline. Once the pipeline is deployed, a static webapp will be created with your newly customizable POC UI for document processing!
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/sample_architecture2.png)
 
@@ -28,8 +28,6 @@ I-ORG: Organization
 I-PER: Person  
 
 There are a few standard labeling schemes and you can find the details [here](http://cs229.stanford.edu/proj2005/KrishnanGanapathy-NamedEntityRecognition.pdf). The data can also be labeled with custom entities as required by the use case.
-## Target Audience
-For this repository our target audience includes data scientists and machine learning engineers with varying levels of NLP knowledge as our content is source-only and targets custom machine learning modelling. The utilities and examples provided are intended to be solution accelerators for real-world NLP problems.
 
 ## Prerequisities
 1. Github account
@@ -45,7 +43,7 @@ To check:
 
 ## Installation Steps
 ### 1. Clone repo to your github https://github.com/jameshoff-msft/bpa-backend
-**Note**: *a Microsoft-linked account is not required*
+**Note**: *a Microsoft organization github account is **not** required*
 ### 2. Create a Resource Group in your Azure Portal
 Select your preferred Region
 ### 3. Setting up Azure DevOps Pipeline
@@ -62,10 +60,10 @@ Input a Project name. And Select a Visibility setting (currently tested with Pri
 ####     4. Select Import a Repository 
 Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field. This repo is used for the POC backend, e.g. creating backend Cognitive Service, Azure functions, and managing credentials
 
-**Note** *You may leave Requires Authentication unchecked*
+**Note** *You may leave Requires Authentication unchecked*  
  Cloning may take several minutes. 
  
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/clone_repository_status)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/clone_repository_status.png)
  
  Your cloned repository should mirror the below directory:
  
@@ -78,20 +76,21 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
 ####     6. Create Service Connection
 This Service Connection will allow Azure DevOps to manage resources within your newly created Resource Group
 1. Click Service Connections in left navigation pane
-2. Select Create service connection - This authorize Azure DevOps to manage your Azure resources on your behalf. Select Next.
-3. Select Azure Resource Manager **Note**: *Service principal option is recommended
+2. Select Create service connection - This authorizes Azure DevOps to manage your Azure resources on your behalf.  
+Select Next.
+3. Select Azure Resource Manager **Note**: *Service principal option is recommended*
 4. Select your subscription level 
-    a. Subscription level scope is recommended. 
-    b. Select your Subscription.
-    c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps  
-    **Note** :*Recommended all lower case alphanumeric only*
+    a. Subscription level scope is recommended.  
+    b. Select your Subscription.  
+    c. Define Service Connection name (save the Service Connection name for reuse in the subsequent steps    
+    **Note** :*Recommended all lower case alphanumeric only*  
     d. check the box for Grant access permission to all pipelines
     
     ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission.png)
     
 5. Input the same Resource group and Service connection name 
 6. Select the checkbox for "Grant access permission to all pipelines  
-       **Note** *alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
+       **Note** *alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions*
        
 ####     7. Define Pipeline
 1. Navigate back to Pipelines in your left Navigation Pane
@@ -115,18 +114,18 @@ We will use the link (github.com/<my account name>/staticwebappstarter) to this 
 4. Select your desired location
 5. Select your previously cloned repo's staticwebappstarter URI.
 6. Find your repository token
-  i. On your github repo page, click your profile  
-  ii. Select settings  
+  i.   On your github repo page, click your profile  
+  ii.  Select settings  
   iii. Select Developer settings at bottom of left navigation pane  
-  iv. Select Personal access tokens  
-  v. Select Generate personal access token  
-  vi. Under Select scopes, select the checkbox for workflow  
+  iv.  Select Personal access tokens  
+  v.   Select Generate personal access token  
+  vi.  Under Select scopes, select the checkbox for workflow  
   vii. Add your own description  
   viii. Select Generate token  
-  ix. Copy your newly generated token  
+  ix.  Copy your newly generated token  
  **Note**:* be sure to save this token for completing pipeline setup, else this token will need to be regenerated  
-  v. Paste your newly generated token in the repositoryToken filed  
-  vi. Under Select scopes, select the checkbox for workflow  
+  v.   Paste your newly generated token in the repositoryToken filed  
+  vi.  Under Select scopes, select the checkbox for workflow  
 
 ## 4. Save and run!
 Insert any commit message. You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
