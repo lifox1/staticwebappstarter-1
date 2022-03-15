@@ -41,7 +41,7 @@
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/sample_architecture2.png)
 
 ## Currently Inluded Algorithms
- The initial release includes two top NLP use cases, text classification, and custom named entity recognition. Additional tasks and models are on the roadmap for inclusion (see Roadmap section later in this document).
+The initial release includes two top NLP use cases, text classification, and custom named entity recognition. Additional tasks and models are on the roadmap for inclusion (see Roadmap section later in this document).
 #### Text Classification
 Text classification is a supervised learning method of learning and predicting the category or the class of a document given its text content. The state-of-the-art methods are based on neural networks of different architectures as well as pre-trained language models or word embeddings.
 #### Custom Named Entity Recognition
@@ -58,11 +58,11 @@ There are a few standard labeling schemes and you can find the details [here](ht
 
 ## Prerequisities
 1. Github account
-2. Ensure your subscription has Microsoft.DocumentDB enabled
-To check:
-    a. Go to your subscription within portal.azure.com
-    b. Select Resource Providers at bottom of left navigation pane
-    c. Within the Filter by name menu, search for Microsoft.DocumentDB
+2. Ensure your subscription has Microsoft.DocumentDB enabled  
+To check:  
+    a. Go to your subscription within portal.azure.com  
+    b. Select Resource Providers at bottom of left navigation pane  
+    c. Within the Filter by name menu, search for Microsoft.DocumentDB  
     d. Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"  
     **Note**:*This process may take several seconds/minutes, be sure to refresh the entire browser periodically*
 3. Ensure that you have accepted terms and conditions for Responsible AI
