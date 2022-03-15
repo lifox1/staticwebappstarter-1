@@ -1,18 +1,15 @@
 # Document Processing Accelerator
 
-## React basic [This Section to be moved to References Section at End]
+## Overview [This Section to be moved to References Section at End]
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site.
+[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Overview
-The goal of this repository is to build a comprehensive set of tools and examples to automate the deployment of a functional, and customizable, POC UI for document processing.
-
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
-
-This repo contains all of the tools required to deploy an end-to-end pipeline with Azure to ingest, process, inference, and visualize document processing.
+## Architectural Overview
+(James to udpate) Once you've created a high-level Resource group, you'll create a high-level Azure DevOps pipeline and import/clone this repo, automatically importing helper libraries and taking advantage of Azure functions to deploy the set of Azure Cognitive Services and manage all of the new Azure module credentials, in the background, within your newly created pipeline. Once the pipeline is deployed, a static webapp will be created with your newly customizable POC UI for document processing!
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/sample_architecture2.png)
 
