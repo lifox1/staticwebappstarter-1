@@ -80,7 +80,7 @@ Select your preferred Region
 
 ####    1. Navigate to Azure DevOps www.dev.azure.com
 ####    2. Create a new Project
-Input a Project name. And Select a Visibility setting (currently tested with Private)
+Type in your Project name. And Select a Visibility setting (currently tested with Private)
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/create_project2.png)
 
@@ -88,7 +88,7 @@ Input a Project name. And Select a Visibility setting (currently tested with Pri
 ####     4. Select Import a Repository 
 Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field. This repo is used for the POC backend, e.g. creating backend Cognitive Service, Azure functions, and managing credentials
 
-**Note** *You may leave Requires Authentication unchecked*  
+**Note**: *You may leave Requires Authentication unchecked*  
  Cloning may take several minutes. 
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/clone_repository_status.png)
@@ -99,7 +99,7 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
  
 ####    5. Navigate to Project Settings
 
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings2.png)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings2.png)  
  
 ####     6. Create Service Connection
 This Service Connection will allow Azure DevOps to manage resources within your newly created Resource Group
