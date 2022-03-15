@@ -5,11 +5,26 @@
 [Currently Inluded Algorithms](#currently-inluded-algorithms)  
 [Prerequisities](#prerequisities)  
 [Installation Steps](#installation-steps)  
-- [Clone starter backend repo](#1-clone-the-starter-backend-repo  
+- [Clone starter backend repo](r#1-clone-the-starter-backend-repo)  
 - [Set Up Resource Group](#2-set-up-resource-group)  
-- [Set up Azure DevOps Pipeline])(#3-set  
+- [Set up Azure DevOps Pipeline]](#3-setting-up-azure-devops-pipeline)  
     - [Navigate to Azure](#1-navigate-to-azure-devops-wwwdevazurecom)
-    - [Create a New Project)(#2-create-a-new-project)
+    - [Create a New Project](#2-create-a-new-project)
+    - [Select Repo](#3-select-repos-in-left-navigation-pane)  
+    - [Import Repository](#4-select-import-a-repository)  
+    - [Navigate to Project Settings](#navigate-to-project-settings)
+    - [Create Service Connection](#create-service-connection)  
+    - [Define Pipeline](#define-pipeline)  
+    - [Review your Pipeline YAML - Update lines 12-17](#9-review-your-pipeline-yaml---update-lines-12-17)  
+- [Save and Run!](#save-and-run!)  
+- [Jump to UI](#retrieve-front-end)  
+- [Load Documents!](#load-documents!)  
+[Contacts](#contacts)  
+[Roadmap](#roadmap)
+[References](#references)  
+
+
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
 ## Overview
 
@@ -17,7 +32,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
+
 
 ## Architecture
 (James to udpate) Once you've created a high-level Resource Group, you'll create a high-level Azure DevOps pipeline and import/clone this repo, automatically importing helper libraries and taking advantage of Azure functions to deploy the set of Azure Cognitive Services and manage all of the new Azure module credentials, in the background, within your newly created pipeline. Once the pipeline is deployed, a static webapp will be created with your newly customizable POC UI for document processing!
