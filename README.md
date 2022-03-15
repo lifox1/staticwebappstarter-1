@@ -101,6 +101,7 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings2.png)  
  
+ 
 ####     6. Create Service Connection
 This Service Connection will allow Azure DevOps to manage resources within your newly created Resource Group
 1. Click Service Connections in left navigation pane
