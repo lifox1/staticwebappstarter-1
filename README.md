@@ -43,22 +43,34 @@ For this repository our target audience includes data scientists and machine lea
 ### 1. Clone repo to your github https://github.com/jameshoff-msft/bpa-backend
 **Note**: *a Microsoft-linked account is not required*
 ### 2. Create a Resource Group in your Azure Portal
-
+Select your preferred Region
 ### 3. Setting up Azure DevOps Pipeline
 **Note**: *You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
 
-####     1. Navigate to Azure DevOps www.dev.azure.com
-####     2. Select Repos
-####     3. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
- Cloning may take several minutes. Your cloned repository should mirror the below directory:
+
+####    1. Navigate to Azure DevOps www.dev.azure.com
+####    2. Create a new Project
+Input a Project name. And Select a Visibility setting (currently tested with Private)
+
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/create_project.png)
+
+####     3. Select Repos
+####     4. Select Import a Repository 
+Select Git for Repository type. Paste the quick start repo https://github.com/jameshoff-msft/bpa-backend into the CLone URL* field
+**Note** *You may leave Requires Authentication unchecked*
+ Cloning may take several minutes. 
+ 
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/clone_repository_status)
+ 
+ Your cloned repository should mirror the below directory:
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/cloned_repository.png)
  
-####    4. Project settings (bottom left)
+####    5. Project settings (bottom left)
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings.png)
  
-####     5. Create Service Connection
+####     6. Create Service Connection
 1. Click Service Connections in left navigation pane
 2. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
 3. Select Azure Resource Manager
@@ -66,12 +78,12 @@ For this repository our target audience includes data scientists and machine lea
 5. Input the same Resource group and Service connection name 
 6. Select the checkbox for "Grant access permission to all pipelines
        * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
-####     6. Define Pipeline
+####     7. Define Pipeline
 1. Navigate back to Pipelines in your left Navigation Pane
 2. Select Create Pipeline
 3. Select Azure Repos Git
 4. Select your previously cloned repo
-####     7. Review your Pipeline YAML - update lines 12-17
+####     8. Review your Pipeline YAML - update lines 12-17
 1. Azure subscription = service connection previously created
 2. Project name has to be unique (this name is used across most of the services created during this accelerator)
 3. Fill in resource group
