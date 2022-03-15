@@ -63,19 +63,19 @@ To check:
     a. Go to your subscription within portal.azure.com
     b. Select Resource Providers at bottom of left navigation pane
     c. Within the Filter by name menu, search for Microsoft.DocumentDB
-    d. Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"
-    **Note**:*This process may take several seconds/minutes, be sure to refresh the entire browser periodically
+    d. Once Microsoft.DocumentDB is found, check if the status is marked as "Registered". If marked as "NotRegistered", Select "Register"  
+    **Note**:*This process may take several seconds/minutes, be sure to refresh the entire browser periodically*
 3. Ensure that you have accepted terms and conditions for Responsible AI
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
 ## Installation Steps
 ### 1. Clone the starter backend repo
-Clone https://github.com/jameshoff-msft/bpa-backend to your github account
+Clone https://github.com/jameshoff-msft/bpa-backend to your github account  
 **Note**: *a Microsoft organization github account is **not** required*
 ### 2. Create a Resource Group in your Azure Portal
 Select your preferred Region
 ### 3. Setting up Azure DevOps Pipeline
-**Note**: *You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
+**Note**: You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
 
 
 ####    1. Navigate to Azure DevOps www.dev.azure.com
