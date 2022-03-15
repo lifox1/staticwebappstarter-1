@@ -71,18 +71,28 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings.png)
  
 ####     6. Create Service Connection
+This Service Connection will allow Azure DevOps to manage resources within your newly created Resource Group
 1. Click Service Connections in left navigation pane
-2. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
-3. Select Azure Resource Manager
-4. Select your subscription
+2. Select Create service connection - This authorize Azure DevOps to manage your Azure resources on your behalf. Select Next.
+3. Select Azure Resource Manager **Note**: *Service principal option is recommended
+4. Select your subscription level 
+    a. Subscription level scope is recommended. 
+    b. Select your Subscription.
+    c. Define Service Connection name
+    d. check the box for Grant access permission to all pipelines
+    
+    ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/access_permission)
+    
 5. Input the same Resource group and Service connection name 
 6. Select the checkbox for "Grant access permission to all pipelines
-       * note alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
+       **Note** *alphanumeric lower case only as multiple azure services and resources are being used with different naming convention restrictions
+       
 ####     7. Define Pipeline
 1. Navigate back to Pipelines in your left Navigation Pane
 2. Select Create Pipeline
 3. Select Azure Repos Git
 4. Select your previously cloned repo
+
 ####     8. Review your Pipeline YAML - update lines 12-17
 1. Azure subscription = service connection previously created
 2. Project name has to be unique (this name is used across most of the services created during this accelerator)
