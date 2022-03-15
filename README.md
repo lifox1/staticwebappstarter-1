@@ -16,9 +16,10 @@ This repo contains all of the tools required to deploy an end-to-end pipeline wi
 
 <Insert screenshot of output here>
 
-![](https://github.com/brandoncwn/staticwebappstarter/blob/main/Sample_Architecture1.png)
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/sample_architecture2.png)
 
 ## Algorithms
+ The initial release includes two top NLP use cases, text classification, and custom named entity recognition. Additional tasks and models are on the roadmap for inclusion (see Roadmap section later in this document).
 #### Text Classification
 Text classification is a supervised learning method of learning and predicting the category or the class of a document given its text content. The state-of-the-art methods are based on neural networks of different architectures as well as pre-trained language models or word embeddings.
 #### Custom Named Entity Recognition
