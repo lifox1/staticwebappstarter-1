@@ -14,8 +14,6 @@ The goal of this repository is to build a comprehensive set of tools and example
 
 This repo contains all of the tools required to deploy an end-to-end pipeline with Azure to ingest, process, inference, and visualize document processing.
 
-<Insert screenshot of output here>
-
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/sample_architecture2.png)
 
 ## Algorithms
@@ -53,9 +51,13 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 ####     2. Select Repos
 ####     3. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
  Cloning may take several minutes. Your cloned repository should mirror the below directory:
+ 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/cloned_repository.png)
+ 
 ####    4. Project settings (bottom left)
+
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings.png)
+ 
 ####     5. Create Service Connection
 1. Click Service Connections in left navigation pane
 2. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
@@ -90,25 +92,30 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 
 ## 5. Select save and run. insert any commit message
 You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
- ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png
+
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png)
  
  You can monitor the detailed log by clicking here <insert screenshot here>
- ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png
+ 
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png)
  
  ## 6. Retrieve front end
 1. Navigate to your Resource Group within your Azure Portal <insert static web app screenshot here>
 2. Select your static webapp
 3. Within the default Overview pane, Select your URL to navigate to the WebApp, this take you to the newly launched WebApp!
- ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app.png
+ 
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app.png)
  
  ## 7. Load Documents!
 1. Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
  
- ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_blank.png
- ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_file_upload_successful.png
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_blank.png)
+ 
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_file_upload_successful.png)
 
 2. Check for you newly found custom entities!
-  ![]https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png
+ 
+  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
 
 
