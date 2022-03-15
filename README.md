@@ -40,10 +40,11 @@ For this repository our target audience includes data scientists and machine lea
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
 ## Installation Steps
-### 1. Clone repo https://github.com/jameshoff-msft/bpa-backend
+### 1. Clone repo to your github https://github.com/jameshoff-msft/bpa-backend
+**Note**: *a Microsoft-linked account is not required*
 ### 2. Create a Resource Group in your Azure Portal
-### 3. Import Git Repo
-### 4. Setting up Azure DevOps Pipeline
+
+### 3. Setting up Azure DevOps Pipeline
 **Note**: *You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
 
 ####     1. Navigate to Azure DevOps www.dev.azure.com
@@ -89,7 +90,7 @@ For this repository our target audience includes data scientists and machine lea
   v. Paste your newly generated token in the repositoryToken filed
   vi. Under Select scopes, select the checkbox for workflow               
 
-## 5. Select save and run. insert any commit message
+## 4. Select save and run. insert any commit message
 You should see the pipeline stages workflow updating. Pipeline deployment will generally take several minutes. Monitor the status of your runs: 
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1.png)
@@ -98,14 +99,14 @@ You should see the pipeline stages workflow updating. Pipeline deployment will g
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/model_pipeline_run_part1_detailed_log.png)
  
- ## 6. Retrieve front end
+ ## 5. Retrieve front end
 1. Navigate to your Resource Group within your Azure Portal <insert static web app screenshot here>
 2. Select your static webapp
 3. Within the default Overview pane, Select your URL to navigate to the WebApp, this take you to the newly launched WebApp!
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/find_static_web_app.png)
  
- ## 7. Load Documents!
+ ## 6. Load Documents!
 1. Use the Select PDF File to load your documents  *Note: your documents should be in pdf/image format. The first document loaded may take several minutes. However, all subsequent documents should be processed much faster
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_blank.png)
