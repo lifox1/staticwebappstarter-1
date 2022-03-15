@@ -1,5 +1,12 @@
 # Document Processing Accelerator
 
+
+## Overview
+
+[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment, without any coding.
+
+
+
 [Overview](#overview)  
 [Architecture](#architecture)  
 [Currently Inluded Algorithms](#currently-inluded-algorithms)  
@@ -25,13 +32,6 @@
 ---
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
-
-## Overview
-
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment, without any coding.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 
 
 ## Architecture
@@ -196,5 +196,6 @@ Check for you newly found custom entities!
 ## References
 | Subject | Source (Link) |
 | ------- | ------------- |
+| React source template | This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) |
 | Custom NER |  https://github.com/microsoft/nlp-recipes/tree/master/examples/named_entity_recognition |
 | Text Classification | https://github.com/microsoft/nlp-recipes/tree/master/examples/text_classification |
