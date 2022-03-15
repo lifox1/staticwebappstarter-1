@@ -7,28 +7,28 @@
 
 
 
-[Overview](#overview)  
-[Architecture](#architecture)  
-[Currently Inluded Algorithms](#currently-inluded-algorithms)  
-[Prerequisities](#prerequisities)  
-[Installation Steps](#installation-steps)  
-- [Clone starter backend repo](r#1-clone-the-starter-backend-repo)  
-- [Set Up Resource Group](#2-set-up-resource-group)  
-- [Set up Azure DevOps Pipeline](#3-setting-up-azure-devops-pipeline)  
+- [Overview](#overview)  
+- [Architecture](#architecture)  
+- [Currently Inluded Algorithms](#currently-inluded-algorithms)  
+- [Prerequisities](#prerequisities)  
+- [Installation Steps](#installation-steps)  
+  - [Clone starter backend repo](#1-clone-the-starter-backend-repo)  
+  - [Set Up Resource Group](#2-create-a-resource-group-in-your-azure-portal)  
+  - [Set up Azure DevOps Pipeline](#3-setting-up-azure-devops-pipeline)  
     - [Navigate to Azure](#1-navigate-to-azure-devops-wwwdevazurecom)
     - [Create a New Project](#2-create-a-new-project)
     - [Select Repo](#3-select-repos-in-left-navigation-pane)  
     - [Import Repository](#4-select-import-a-repository)  
-    - [Navigate to Project Settings](#navigate-to-project-settings)
-    - [Create Service Connection](#create-service-connection)  
-    - [Define Pipeline](#define-pipeline)  
-    - [Review your Pipeline YAML](#9-review-your-pipeline-yaml)  
-[Save and Run!](#save-and-run!)  
-[Launch App](#load-app)  
-[Load Documents!](#load-documents!)  
-[Contacts](#contacts)  
-[Roadmap](#roadmap)
-[References](#references)  
+    - [Navigate to Project Settings](#5-navigate-to-project-settings)
+    - [Create Service Connection](#6-create-service-connection)  
+    - [Define Pipeline](#7-define-pipeline)  
+    - [Review your Pipeline YAML](#8--review-your-pipeline-yaml)  
+- [Save and Run!](#save-and-run!)  
+- [Launch App](#load-app)  
+- [Load Documents!](#load-documents!)  
+- [Contacts](#contacts)  
+- [Roadmap](#roadmap)
+- [References](#references)  
 ---
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
@@ -96,7 +96,7 @@ Select Git for Repository type. Paste the quick start repo https://github.com/ja
  
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/cloned_repository.png)
  
-####    5. Project settings (bottom left)
+####    5. Navigate to Project Settings
 
  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings2.png)
  
