@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Overview
 The goal of this repository is to build a comprehensive set of tools and examples to automate the deployment of a functional, and customizable, POC UI for document processing.
 
-![](https://github.com/brandoncwn/staticwebappstarter/blob/main/web_app_ui2.png)
+![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
 
 
 This repo contains all of the tools required to deploy an end-to-end pipeline with Azure to ingest, process, inference, and visualize document processing.
@@ -53,9 +53,9 @@ You'll use Azure DevOps for running the multi-stage pipeline with build. If you 
 ####     2. Select Repos
 ####     3. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
  Cloning may take several minutes. Your cloned repository should mirror the below directory:
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/cloned_repository.png)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/cloned_repository.png)
 ####    4. Project settings (bottom left)
- ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/project_settings.png)
+ ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/project_settings.png)
 ####     5. Create Service Connection
 1. Click Service Connections in left navigation pane
 2. Select Create service connection - This authorize Azure DevOps to access your Azure resources on your behalf
