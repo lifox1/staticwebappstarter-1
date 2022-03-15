@@ -186,7 +186,9 @@ Use the Select PDF File to load your documents
 
 Check for you newly found custom entities!
  
-  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)
+  ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/web_app_ui2.png)  
+  
+You can further customize your UI via the front end repo https://github.com/<your github account>/staticwebappstarter. Simple instructions on how to quickly do so are coming soon
 
 ## Contacts
  Please reach out to the AI Rangers for more info or feedback aka.ms/AIRangers
@@ -194,6 +196,7 @@ Check for you newly found custom entities!
 ## Roadmap
 | Priority | Item |
 | ------- | ------------- |
+| Impending | Adding instructions on basic UI customizations (e.g. Adding header graphics, changing title, etc..) |
 | Impending | Add standard NER capability from Language Service [What is Named Entity Recognition (NER) in Azure Cognitive Service for Language](https://docs.microsoft.com/en-us/azure/cognitive-services/language-service/named-entity-recognition/overview#:~:text=Named%20Entity%20Recognition%20(NER)%20is,categorize%20entities%20in%20unstructured%20text.)  |
 | TBD | Add text summarization |
 | TBD | ... |
