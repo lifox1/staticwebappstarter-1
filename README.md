@@ -2,7 +2,7 @@
 
 ## Overview [This Section to be moved to References Section at End]
 
-[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment.
+[Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview) allows you to easily build [React](https://reactjs.org/) apps in minutes. Use this repo with the [React quickstart](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=react) to build and customize a new static site and automate the deployment of a functional, and customizable, POC UI for document processing. This guide will present a high-level overview of the deployment architecture, with a step-by-step instructional guide for immediate deployment, without any coding.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -13,18 +13,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![](https://github.com/brandoncwn/staticwebappstarter/blob/main/images/sample_architecture2.png)
 
-## Algorithms
+## Currently Inluded Algorithms
  The initial release includes two top NLP use cases, text classification, and custom named entity recognition. Additional tasks and models are on the roadmap for inclusion (see Roadmap section later in this document).
 #### Text Classification
 Text classification is a supervised learning method of learning and predicting the category or the class of a document given its text content. The state-of-the-art methods are based on neural networks of different architectures as well as pre-trained language models or word embeddings.
 #### Custom Named Entity Recognition
 Named Entity Recognition (NER) is the task of detecting and classifying real-world objects mentioned in text. Common named entities include person names, locations, organizations, etc. The state-of-the art NER methods include combining Long Short-Term Memory neural network with Conditional Random Field (LSTM-CRF) and pretrained language models like BERT.
 
-NER usually involves assigning an entity label to each word in a sentence as shown in the figure below.
+NER usually involves assigning an entity label to each word in a sentence, such as the entities shown below:
 
- Fine-tuned BERT for NER tasks
-
-O: Not an entity  
+O: Not an entity (i.e. All other words)
 I-LOC: Location  
 I-ORG: Organization  
 I-PER: Person  
@@ -35,7 +33,10 @@ For this repository our target audience includes data scientists and machine lea
 
 ## Prerequisities
 1. Github account
-2. Ensure that you have accepted terms and conditions for Responsible AI
+2. Ensure your subscription has Microsoft.DocumentDB enabled 
+
+![image](https://user-images.githubusercontent.com/11619148/158391730-1badf943-e8fc-4e93-9684-4f9d63040be2.png)
+3. Ensure that you have accepted terms and conditions for Responsible AI
  "You must create your first Face, Language service, or Computer Vision resources from the Azure portal to review and acknowledge the terms and conditions. You can do so here: Face, Language service, Computer Vision. After that, you can create subsequent resources using any deployment tool (SDK, CLI, or ARM template, etc) under the same Azure subscription."
 
 ## Installation Steps
@@ -43,7 +44,8 @@ For this repository our target audience includes data scientists and machine lea
 ### 2. Create a Resource Group in your Azure Portal
 ### 3. Import Git Repo
 ### 4. Setting up Azure DevOps Pipeline
-You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
+**Note**: *You'll use Azure DevOps for running the multi-stage pipeline with build. If you don't already have an Azure DevOps organization, create one by following the instructions at [Quickstart: Create an organization or project collection.](If you don't already have an Azure DevOps organization, create one by following the instructions at Quickstart: Create an organization or project collection.)
+
 ####     1. Navigate to Azure DevOps www.dev.azure.com
 ####     2. Select Repos
 ####     3. Select Import a Repository https://github.com/jameshoff-msft/bpa-backend
