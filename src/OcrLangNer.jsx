@@ -1,35 +1,32 @@
 import React, {useState} from 'react';
 
-function OcrLangCner(props) {
+function OcrLangNer(props) {
     const [document, setDocument] = useState(null)
 
     const colors = ["#007BEB", "#20B883", "#A0F09A", "#E0056C", "#000FF0", "#60C6F7"]
 
     const highlightText = (text, offset, textLength, color) => {
       const result = text.substring(0, offset - 1) + ` <span style="background-color:${color}">` + text.substring(offset, offset + textLength) + `</span> ` +
-        text.substring(offset + textLength + 1, document.ocr.length);
+        text.substring(offset + textLength + 1, text.length);
       return result
     }
-
-
   
     const getText = () => {
       if (document) {
         let currentText = document.ocr
         let colorIndex = 0
         let categories = {}
-        console.log(`ner : ${JSON.stringify(document.cner)}`)
-        for (let i = document.cner.length - 1; i >= 0; i--) {
-          console.log(`ner category ${document.cner[i].category}`)
+        console.log(`ner : ${JSON.stringify(document.ner)}`)
+        for (let i = document.ner.length - 1; i >= 0; i--) {   
           let color = null
-          if (categories[document.cner[i].category]) {
-            color = categories[document.cner[i].category]
+          if (categories[document.ner[i].category]) {
+            color = categories[document.ner[i].category]
           } else {
-            categories[document.cner[i].category] = colors[colorIndex % colors.length]
+            categories[document.ner[i].category] = colors[colorIndex % colors.length]
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
         }
         const keys = Object.keys(categories)
         const values = []
@@ -52,38 +49,38 @@ function OcrLangCner(props) {
     }
   
     const parseData = (documents) => {
-      console.log(`parseData : ${JSON.stringify(documents)}`)
-      if (documents) {
-        return (
-          <>
-            <div className="filenameHeader">Processed Files (select one)</div>
-            {documents.map(document => {
-                if(document && document.cner)
-                    return(<div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>)
-            })}
-          </>
-        )
+        console.log(`parseData : ${JSON.stringify(documents)}`)
+        if (documents) {
+          return (
+            <>
+              <div className="filenameHeader">Processed Files (select one)</div>
+              {documents.map(document => {
+                  if(document && document.ner)
+                      return(<div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>)
+              })}
+            </>
+          )
+        }
+        return (<></>)
       }
-      return (<></>)
-    }
   
     const showLegend = () => {
       if (document) {
         let currentText = document.ocr
         let colorIndex = 0
         let categories = {}
-        console.log(`ner : ${JSON.stringify(document.cner)}`)
-        for (let i = document.cner.length - 1; i >= 0; i--) {
-          console.log(`ner category ${document.cner[i].category}`)
+        console.log(`ner : ${JSON.stringify(document.ner)}`)
+        for (let i = document.ner.length - 1; i >= 0; i--) {
+          console.log(`ner category ${document.ner[i].category}`)
           let color = null
-          if (categories[document.cner[i].category]) {
-            color = categories[document.cner[i].category]
+          if (categories[document.ner[i].category]) {
+            color = categories[document.ner[i].category]
           } else {
-            categories[document.cner[i].category] = colors[colorIndex % colors.length]
+            categories[document.ner[i].category] = colors[colorIndex % colors.length]
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
         }
         const keys = Object.keys(categories)
         const values = []
@@ -117,5 +114,5 @@ function OcrLangCner(props) {
     )
 }
 
-export default OcrLangCner
+export default OcrLangNer
 
