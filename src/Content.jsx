@@ -10,7 +10,7 @@ import Upload from './Upload';
 export default function Content() {
 
     const [selectedMenuItem, setSelectedMenuItem] = useState("upload documents");
-    const [document, setDocument] = useState(null)
+    //const [document, setDocument] = useState(null)
     const [documents, setDocuments] = useState([])
 
     useEffect(() => {
@@ -31,7 +31,7 @@ export default function Content() {
         if (selectedMenuItem === 'upload documents')
             return (<Upload />)
         else
-            return (<>other stuff</>)
+            return (<>other stuff {documents}</>)
     }
 
     return (

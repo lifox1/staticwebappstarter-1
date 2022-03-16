@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FileUploader } from "react-drag-drop-files";
 
 
@@ -8,10 +8,9 @@ function Upload() {
 
     const [image, setImage] = useState(null);
     const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
+ 
     const [showFail, setShowFail] = useState(false);
-    const handleCloseFail = () => setShowFail(false);
-    //const handleShow = () => setShow(true);
+
 
     const handleChange = async (file) => {
         console.log(file)
@@ -19,6 +18,7 @@ function Upload() {
             if (file.name) {
                 console.log(`image : ${file}`)
                 setImage(file.name);
+                console.log(image, show, showFail)
                 // setCreateObjectURL(URL.createObjectURL(i));
                 const body = new FormData();
                 body.append("file", file);
