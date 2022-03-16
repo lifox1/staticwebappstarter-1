@@ -18,18 +18,18 @@ function OcrLangCner(props) {
         let currentText = document.ocr
         let colorIndex = 0
         let categories = {}
-        console.log(`ner : ${JSON.stringify(document.cner)}`)
-        for (let i = document.cner.length - 1; i >= 0; i--) {
-          console.log(`ner category ${document.cner[i].category}`)
+        console.log(`ner : ${JSON.stringify(document.ner)}`)
+        for (let i = document.ner.length - 1; i >= 0; i--) {
+          console.log(`ner category ${document.ner[i].category}`)
           let color = null
-          if (categories[document.cner[i].category]) {
-            color = categories[document.cner[i].category]
+          if (categories[document.ner[i].category]) {
+            color = categories[document.ner[i].category]
           } else {
-            categories[document.cner[i].category] = colors[colorIndex % colors.length]
+            categories[document.ner[i].category] = colors[colorIndex % colors.length]
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
         }
         const keys = Object.keys(categories)
         const values = []
@@ -58,7 +58,7 @@ function OcrLangCner(props) {
           <>
             <div className="filenameHeader">Processed Files (select one)</div>
             {documents.map(document => {
-                if(document && document.cner)
+                if(document && document.ner)
                     return(<div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>)
             })}
           </>
@@ -72,18 +72,18 @@ function OcrLangCner(props) {
         let currentText = document.ocr
         let colorIndex = 0
         let categories = {}
-        console.log(`ner : ${JSON.stringify(document.cner)}`)
-        for (let i = document.cner.length - 1; i >= 0; i--) {
-          console.log(`ner category ${document.cner[i].category}`)
+        console.log(`ner : ${JSON.stringify(document.ner)}`)
+        for (let i = document.ner.length - 1; i >= 0; i--) {
+          console.log(`ner category ${document.ner[i].category}`)
           let color = null
-          if (categories[document.cner[i].category]) {
-            color = categories[document.cner[i].category]
+          if (categories[document.ner[i].category]) {
+            color = categories[document.ner[i].category]
           } else {
-            categories[document.cner[i].category] = colors[colorIndex % colors.length]
+            categories[document.ner[i].category] = colors[colorIndex % colors.length]
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
         }
         const keys = Object.keys(categories)
         const values = []
