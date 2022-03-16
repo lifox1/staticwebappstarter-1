@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './styles/Home.module.css'
 import { Button, Modal } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import 'react-pro-sidebar/dist/css/styles.css';
 
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -182,8 +183,18 @@ export default function Body() {
 
   return (
 
-    <div className={styles.container}>
-      <main className={styles.main}>
+    <div class="container" >
+      
+      <main class="main"  style={{ backgroundColor: "blue",width: "100%" }}>
+      <ProSidebar>
+        <Menu iconShape="square">
+          <MenuItem >Dashboard</MenuItem>
+          <SubMenu title="Components" >
+            <MenuItem>Component 1</MenuItem>
+            <MenuItem>Component 2</MenuItem>
+          </SubMenu>
+        </Menu>
+      </ProSidebar>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>File Uploaded</Modal.Title>
@@ -213,24 +224,10 @@ export default function Body() {
           </label>
         </div>
         {renderBody()}
-        {/* <div className="documentTextParent">
-          <div className="filenames">
-            {parseData(documents)}
-          </div>
-          <div className="documentText">
-            {getText()}
-          </div>
-          <div >
-            {showLegend()}
-          </div>
 
-        </div> */}
 
       </main>
 
-      <footer className={styles.footer}>
-
-      </footer>
     </div>
   )
 }

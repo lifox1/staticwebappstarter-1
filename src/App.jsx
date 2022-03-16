@@ -1,13 +1,19 @@
 import React from 'react';
-import './styles/globals.css'
+import './styles/update.css'
 import Header from './Header';
-import Body from './Body';
+import Content from './Content';
+import Footer from './Footer'
+import './custom.scss';
 
 function App({ Component, pageProps }) {
   return (
     <>
       <Header />
+      <Content />
+      <Footer />
+      {/* <Header />
       <Body />
+      <Footer /> */}
     </>
   )
 }

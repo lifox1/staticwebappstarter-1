@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div class="topnav">
-            My New Header
+        <div class="header" >
+            Business Process Automation Accelerator
         </div>
     )
 }

@@ -1,0 +1,28 @@
+.header {
+    overflow: hidden;
+    background-color: black;
+    height: 100px;
+    color: white;
+    padding: 33px; 
+  }
+
+.footer {
+
+    overflow: hidden;
+    background-color: black;
+    height: 100px;
+    color: white;
+    padding: 33px; 
+}
+
+.content{
+    background-color: gray;
+    height: 90vh;
+    color: white;
+    display: flex;
+}
+
+.content.center{
+    background-color: rgb(196, 196, 196);
+    flex: auto;
+}
