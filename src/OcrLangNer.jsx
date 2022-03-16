@@ -50,14 +50,17 @@ function OcrLangNer(props) {
   
     const parseData = (documents) => {
         console.log(`parseData : ${JSON.stringify(documents)}`)
-        if (documents) {
+        const filteredDocs = documents.filter(item => {
+            if(item.ner){
+                return true
+            }
+            return false
+        })
+        if (filteredDocs) {
           return (
             <>
               <div className="filenameHeader">Processed Files (select one)</div>
-              {documents.map(document => {
-                  if(document && document.ner)
-                      return(<div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>)
-              })}
+              {filteredDocs.map(document => (<div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>))}
             </>
           )
         }
