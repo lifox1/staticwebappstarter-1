@@ -6,11 +6,11 @@ import 'react-pro-sidebar/dist/css/styles.css';
 // Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Upload from './Upload';
+import OcrLangCner from './OcrLangCner';
 
 export default function Content() {
 
     const [selectedMenuItem, setSelectedMenuItem] = useState("upload documents");
-    //const [document, setDocument] = useState(null)
     const [documents, setDocuments] = useState([])
 
     useEffect(() => {
@@ -26,12 +26,20 @@ export default function Content() {
         console.log('click')
         setSelectedMenuItem("upload documents")
     }
+    const onMenuOcrLangCner = async () => {
+        console.log('click')
+        setSelectedMenuItem("ocr lang cner")
+    }
 
     const renderContent = () => {
-        if (selectedMenuItem === 'upload documents')
-            return (<Upload />)
-        else
-            return (<>other stuff {documents}</>)
+        switch(selectedMenuItem){
+            case 'upload documents' :
+                return (<Upload />)
+            case 'ocr lang cner' :
+                return (<OcrLangCner documents={documents}/>)
+            default:
+                return (<>error {documents}</>)
+        }
     }
 
     return (
@@ -42,12 +50,12 @@ export default function Content() {
                     <MenuItem onClick={onMenuUploadDocumentsClick}>Upload Documents</MenuItem>
                     <SubMenu title="Extraction Patterns" >
                         <MenuItem>OCR + Language Studio NER</MenuItem>
-                        <MenuItem>OCR + Language Studio Custom NER</MenuItem>
+                        <MenuItem onClick={onMenuOcrLangCner}>OCR + Language Studio Custom NER</MenuItem>
                         <MenuItem>Form Recognizer : General Document</MenuItem>
                     </SubMenu>
-                    <SubMenu title="Classification Patterns" >
-                        
-                    </SubMenu>
+                    <SubMenu title="Classification Patterns" />
+                    <SubMenu title="Translation Patterns" />
+                    <SubMenu title="Summarization Patterns" />
                 </Menu>
             </ProSidebar>
 
