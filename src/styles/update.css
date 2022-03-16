@@ -16,14 +16,14 @@
 }
 
 .content{
-    background-color: gray;
+    background-color: rgb(255, 255, 255);
     height: 90vh;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
 }
 
 .content.center{
-    background-color: rgb(219, 219, 219);
+    background-color: white;
     flex: auto;
 }
 
@@ -31,14 +31,14 @@
     margin-right : 30px;
     width : 50%;
     height : 800px;
-    border-style: solid;
+    padding: 10px;
     overflow: auto;
-    background-color: white;
+    background-color: rgb(247, 247, 247);
   }
 
 .documentTextParent {
     display: flex;
-    color: rgb(51, 29, 92);
+    color: black;
     margin: 100px;
     
 }
@@ -50,7 +50,6 @@
 
 .filename{
     padding : 10px;
-    background-color: white;
 }
 
 .filename:hover{

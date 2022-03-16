@@ -41,7 +41,7 @@ function Upload() {
 
     return (
         <div style={{ padding: "300px" }}>
-            <h3 style={{ color: 'black', paddingBottom: "10px" }}>Upload a document to Blob Storage.</h3>
+            <h3 style={{ color: 'black', paddingBottom: "10px" }}>Upload a document to Blob Storage</h3>
             <p style={{ color: 'black', paddingBottom: "50px",width: "600px" }}>Before any insights can be viewed by a pattern, one or more documents must be uploaded.  The documents will be copied to Blob Storage which will trigger a Function App to process them.  The processing can take some time and the insights will not appear immediately.</p>
             <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
             
