@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 
-
-
 function OcrLangCner(props) {
     const [document, setDocument] = useState(null)
 
@@ -12,6 +10,8 @@ function OcrLangCner(props) {
         text.substring(offset + textLength + 1, document.ocr.length);
       return result
     }
+
+
   
     const getText = () => {
       if (document) {
@@ -39,7 +39,10 @@ function OcrLangCner(props) {
   
         console.log(JSON.stringify(values))
         return (
-          <div style={{ padding: 30 }} dangerouslySetInnerHTML={{ __html: currentText }}></div>
+            <div className='documentText'>
+                OCR Results:
+                <div style={{ padding: 30 }} dangerouslySetInnerHTML={{ __html: currentText }}></div>
+            </div>
         );
       }
     }
@@ -53,6 +56,7 @@ function OcrLangCner(props) {
       if (documents) {
         return (
           <>
+            <div className="filenameHeader">Processed Files (select one)</div>
             {documents.map(document => (
               <div className="filename" onClick={() => { documentSelected(document) }}>{document.filename}</div>
             ))}
@@ -89,9 +93,10 @@ function OcrLangCner(props) {
         console.log(JSON.stringify(values))
         return (
           <>
+           <div className="filenameHeader">Custom NER Results</div>
             {values.map(v => (
               <>
-                <div><span class="dot" style={{ backgroundColor: v.value }}></span> {v.key}</div>
+                <div className='resultLabel'><span class="dot" style={{ backgroundColor: v.value }}></span> {v.key}</div>
               </>
             ))}
           </>
@@ -99,17 +104,15 @@ function OcrLangCner(props) {
       }
     }
     return (
-        <>
+        <div className="documentTextParent" style={{padding : "30px"}}>
             <div className="filenames">
                 {parseData(props.documents)}
             </div>
-            <div className="documentText">
-                {getText()}
-            </div>
-            <div >
+            {getText()}
+            <div className='filenames'>
                 {showLegend()}
             </div>
-        </>
+        </div>
     )
 }
 
