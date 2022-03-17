@@ -19,6 +19,7 @@ function OcrLangCner(props) {
         let colorIndex = 0
         let categories = {}
         console.log(`ner : ${JSON.stringify(document.cner)}`)
+        let lastOffset = currentText.length*2
         for (let i = document.cner.length - 1; i >= 0; i--) {
           console.log(`ner category ${document.cner[i].category}`)
           let color = null
@@ -29,7 +30,12 @@ function OcrLangCner(props) {
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          if((document.cner[i].offset + document.cner[i].length) < lastOffset){
+            console.log(lastOffset)
+            lastOffset = document.cner[i].offset
+            currentText = highlightText(currentText, document.cner[i].offset, document.cner[i].length, color)
+          }
+         
         }
         const keys = Object.keys(categories)
         const values = []

@@ -16,6 +16,7 @@ function OcrLangNer(props) {
         let currentText = document.ocr
         let colorIndex = 0
         let categories = {}
+        let lastOffset = currentText.length*2
         console.log(`ner : ${JSON.stringify(document.ner)}`)
         for (let i = document.ner.length - 1; i >= 0; i--) {   
           let color = null
@@ -26,7 +27,11 @@ function OcrLangNer(props) {
             color = colors[colorIndex % colors.length]
             colorIndex++
           }
-          currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
+          if((document.ner[i].offset + document.ner[i].length) < lastOffset){
+            console.log(lastOffset)
+            lastOffset = document.ner[i].offset
+            currentText = highlightText(currentText, document.ner[i].offset, document.ner[i].length, color)
+          }
         }
         const keys = Object.keys(categories)
         const values = []
