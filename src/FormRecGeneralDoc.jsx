@@ -34,7 +34,7 @@ function FormRecGeneralDoc(props) {
                     Key : {kvp.key.content}
                   </div>
                   <div style={{ paddingLeft: "20px", paddingBottom: "20px" }}>
-                    Value : {kvp.value.content}
+                    Value : {kvp?.value?.content ? kvp.value.content : ""}
                   </div>
                 </div>
                 <div style={{ padding: "20px" }}>
