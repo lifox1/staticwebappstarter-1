@@ -99,7 +99,7 @@ function OcrLangNer(props) {
         console.log(JSON.stringify(values))
         return (
           <>
-           <div className="filenameHeader">Custom NER Results</div>
+           <div className="filenameHeader">NER Results</div>
             {values.map(v => (
               <>
                 <div className='resultLabel'><span class="dot" style={{ backgroundColor: v.value }}></span> {v.key}</div>
