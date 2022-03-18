@@ -24,21 +24,21 @@ function FormRecGeneralDoc(props) {
   const renderKVP = () => {
     if (document?.formrecGeneralDoc?.keyValuePairs) {
       return (
-        <div >
+        <div style={{height : "700px", overflow : "auto"}}>
           <div className="filenameHeader">Key/Value Pairs</div>
           {document.formrecGeneralDoc.keyValuePairs.map(kvp => {
             return (
               <div style={{ display: "flex", borderStyle: "solid", borderWidth: "0 0 1px 0px" }}>
                 <div>
                   <div style={{ padding: "20px" }}>
-                    Key : {kvp.key.content}
+                    Key : <span style={{color : 'blue'}}>{kvp.key.content}</span>
                   </div>
                   <div style={{ paddingLeft: "20px", paddingBottom: "20px" }}>
-                    Value : {kvp?.value?.content ? kvp.value.content : ""}
+                    Value : <span style={{color : 'orange'}}>{kvp?.value?.content ? kvp.value.content : ""}</span>
                   </div>
                 </div>
                 <div style={{ padding: "20px" }}>
-                  Confidence Score : {kvp.confidence}
+                  Confidence Score : <span style={{color : 'green'}}>{kvp.confidence}</span>
                 </div>
               </div>
             )
@@ -51,19 +51,19 @@ function FormRecGeneralDoc(props) {
   const renderEntities = () => {
     if (document?.formrecGeneralDoc?.keyValuePairs) {
       return (
-        <div style={{paddingLeft : "150px"}}>
+        <div style={{paddingLeft : "150px",height : "700px", overflow : "auto"}}>
           <div className="filenameHeader">Named Entities</div>
           {document.formrecGeneralDoc.entities.map(kvp => {
             return (
               <div style={{ display: "flex", borderStyle: "solid", borderWidth: "0 0 1px 0px" }}>
                 <div>
                   <div style={{ padding: "20px" }}>
-                    Key : {kvp.content}
+                    Key : <span style={{color : 'blue'}}> {kvp.content}  </span>
                   </div>
 
                 </div>
                 <div style={{ padding: "20px" }}>
-                  Confidence Score : {kvp.confidence}
+                  Confidence Score : <span style={{color : 'green'}}>{kvp.confidence}</span>
                 </div>
               </div>
             )
